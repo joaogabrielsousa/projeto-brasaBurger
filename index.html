@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brasa Burger — Feito na brasa. Feito para lembrar.</title>
+  <meta name="description"
+    content="Brasa Burger: hambúrgueres artesanais grelhados na brasa, com ingredientes selecionados e molho da casa. Peça agora.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#topo" class="logo" aria-label="Brasa Burger, página inicial">
+        <span class="logo__line">BRASA</span>
+        <span class="logo__line logo__line--accent">BURGER</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#topo" class="nav__link">Home</a></li>
+          <li><a href="pages/cardapio.html" class="nav__link">Cardápio</a></li>
+          <li><a href="#historia" class="nav__link">Nossa História</a></li>
+          <li><a href="#locais" class="nav__link">Locais</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <!--<button class="icon-btn" type="button" aria-label="Pesquisar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Minha conta">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" />
+            <path d="M4 20c0-4 3.5-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+         <button class="icon-btn icon-btn--cart" type="button" aria-label="Carrinho de compras" id="cart-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+            <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+          </svg>
+          <span class="cart-badge" id="cart-badge" aria-live="polite">0</span>
+        </button> -->
+
+        <button class="hamburger" id="hamburger-btn" type="button" aria-label="Abrir menu" aria-expanded="false"
+          aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-menu__list">
+        <li><a href="#topo" class="mobile-menu__link">Home</a></li>
+        <li><a href="pages/cardapio.html" class="mobile-menu__link">Cardápio</a></li>
+        <li><a href="#historia" class="mobile-menu__link">Nossa História</a></li>
+        <li><a href="#locais" class="mobile-menu__link">Locais</a></li>
+        <li><a href="#contato" class="mobile-menu__link">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="topo">
+      <div class="hero__ember" aria-hidden="true"></div>
+      <div class="hero__smoke" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <div class="hero__content reveal">
+          <p class="hero__kicker">Ingredientes de verdade. Sabor de verdade.</p>
+          <h1 class="hero__title">Brasa acesa.<br>Sabor no alto.</h1>
+          <p class="hero__desc">Hambúrgueres artesanais preparados com carne selecionada, ingredientes frescos, queijo
+            derretido e o sabor único da nossa brasa.</p>
+
+          <div class="hero__actions">
+            <a href="#cardapio" class="btn btn--primary">Pedir agora <span aria-hidden="true">→</span></a>
+            <a href="pages/cardapio.html" class="btn btn--ghost">Ver cardápio</a>
+          </div>
+
+          <ul class="hero__tags">
+            <li>100% carne bovina</li>
+            <li>Grelhado na brasa</li>
+            <li>Molho da casa</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="hero__plate">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80"
+              alt="Hambúrguer artesanal Brasa Burger com pão brioche, carne grelhada, queijo derretido e molho da casa"
+              width="1200" height="1200" loading="eager">
+          </div>
+        </div>
+      </div>
+
+      <button class="scroll-cue" id="scroll-cue" aria-label="Rolar para a próxima seção">
+        <span></span>
+      </button>
+    </section>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section class="features" aria-label="Diferenciais Brasa Burger">
+      <div class="features__grid">
+
+        <article class="feature-card reveal">
+          <span class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path
+                d="M24 6c4 6-2 8-2 13a6 6 0 0 0 12 0c0-2-1-3-1-3 3 2 5 6 5 10a14 14 0 1 1-28 0c0-8 6-11 6-16 0-2 4-2 4-4 0-2 4 0 4 0Z"
+                stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <h3 class="feature-card__title">Ingredientes premium</h3>
+          <p class="feature-card__text">Ingredientes selecionados diariamente.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <span class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="20" width="32" height="6" rx="2" stroke="currentColor" stroke-width="2" />
+              <path d="M12 26v6M20 26v6M28 26v6M36 26v6" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" />
+              <path d="M14 20c0-4 2-7 2-9M24 20c0-4 2-7 2-9M34 20c0-4 2-7 2-9" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+          </span>
+          <h3 class="feature-card__title">Grelhado na brasa</h3>
+          <p class="feature-card__text">Carne preparada em fogo alto para preservar sabor e suculência.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <span class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M10 18h28l-3 20a3 3 0 0 1-3 3H16a3 3 0 0 1-3-3L10 18Z" stroke="currentColor" stroke-width="2"
+                stroke-linejoin="round" />
+              <path d="M16 18c0-6 3-11 8-11s8 5 8 11" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </span>
+          <h3 class="feature-card__title">Molho da casa</h3>
+          <p class="feature-card__text">Receita exclusiva da Brasa Burger.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <span class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 40s-15-9-15-19a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 10-15 19-15 19Z" stroke="currentColor"
+                stroke-width="2" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <h3 class="feature-card__title">Feito com paixão</h3>
+          <p class="feature-card__text">Cada burger preparado cuidadosamente.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== CARDÁPIO ===================== -->
+    <section class="menu" id="cardapio">
+      <div class="menu__head reveal">
+        <h2 class="menu__title">Burgers que marcam.</h2>
+        <p class="menu__subtitle">Conheça alguns dos favoritos da casa.</p>
+      </div>
+
+      <div class="menu__grid">
+
+        <article class="menu-card reveal" data-name="Brasa Bacon" data-price="32.90">
+          <div class="menu-card__media">
+            <span class="menu-card__badge">Mais pedido</span>
+            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=800&q=80"
+              alt="Brasa Bacon: hambúrguer com bacon crocante e queijo cheddar" loading="lazy">
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__row">
+              <h3 class="menu-card__name">Brasa Bacon</h3>
+              <span class="menu-card__price">R$ 32,90</span>
+            </div>
+            <p class="menu-card__desc">Carne bovina, bacon crocante, queijo cheddar e molho da casa.</p>
+            <!-- <button class="menu-card__add" type="button" aria-label="Adicionar Brasa Bacon ao carrinho">+</button> -->
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-name="Jalapeño Fire" data-price="34.90">
+          <div class="menu-card__media">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80"
+              alt="Jalapeño Fire: hambúrguer com jalapeño e cebola crispy" loading="lazy">
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__row">
+              <h3 class="menu-card__name">Jalapeño Fire</h3>
+              <span class="menu-card__price">R$ 34,90</span>
+            </div>
+            <p class="menu-card__desc">Carne bovina, cheddar, jalapeño, cebola crispy e molho picante.</p>
+            <!-- <button class="menu-card__add" type="button" aria-label="Adicionar Jalapeño Fire ao carrinho">+</button> -->
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-name="Brasa Supreme" data-price="39.90">
+          <div class="menu-card__media">
+            <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80"
+              alt="Brasa Supreme: duplo burger com cebola caramelizada" loading="lazy">
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__row">
+              <h3 class="menu-card__name">Brasa Supreme</h3>
+              <span class="menu-card__price">R$ 39,90</span>
+            </div>
+            <p class="menu-card__desc">Duplo burger, cheddar, bacon, cebola caramelizada e molho especial.</p>
+            <!-- <button class="menu-card__add" type="button" aria-label="Adicionar Brasa Supreme ao carrinho">+</button> -->
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-name="Crispy Chicken" data-price="29.90">
+          <div class="menu-card__media">
+            <img src="https://images.unsplash.com/photo-1615297928064-24977384d0da?auto=format&fit=crop&w=800&q=80"
+              alt="Crispy Chicken: hambúrguer de frango crocante" loading="lazy">
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__row">
+              <h3 class="menu-card__name">Crispy Chicken</h3>
+              <span class="menu-card__price">R$ 29,90</span>
+            </div>
+            <p class="menu-card__desc">Frango crocante, queijo, alface, tomate e molho especial.</p>
+            <!-- <button class="menu-card__add" type="button" aria-label="Adicionar Crispy Chicken ao carrinho">+</button> -->
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-name="Mushroom Melt" data-price="33.90">
+          <div class="menu-card__media">
+            <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?auto=format&fit=crop&w=800&q=80"
+              alt="Mushroom Melt: hambúrguer com cogumelos salteados" loading="lazy">
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__row">
+              <h3 class="menu-card__name">Mushroom Melt</h3>
+              <span class="menu-card__price">R$ 33,90</span>
+            </div>
+            <p class="menu-card__desc">Carne bovina, queijo, cogumelos salteados e molho cremoso.</p>
+            <!-- <button class="menu-card__add" type="button" aria-label="Adicionar Mushroom Melt ao carrinho">+</button> -->
+          </div>
+        </article>
+
+      </div>
+
+      <div class="menu__footer reveal">
+        <a href="pages/cardapio.html" class="btn btn--outline">Ver cardápio completo <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- ===================== NOSSA HISTÓRIA ===================== -->
+    <section class="story" id="historia">
+      <div class="story__media reveal">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80"
+          alt="Hambúrguer sendo preparado na grelha sobre a brasa" loading="lazy">
+        <div class="story__stamp">
+          <span>Est.</span>
+          <strong>2020</strong>
+        </div>
+      </div>
+
+      <div class="story__content reveal">
+        <p class="story__kicker">Nossa história</p>
+        <h2 class="story__title">Feito na brasa.<br>Feito para lembrar.</h2>
+        <p class="story__text">
+          Tudo começou numa grelha pequena, nos fundos de um bar de bairro, onde um cozinheiro teimoso se recusava a
+          usar chapa. Ele dizia que hambúrguer de verdade precisa do calor direto do carvão — da fumaça que gruda no
+          sabor e não sai mais da memória.
+        </p>
+        <p class="story__text">
+          Anos depois, a mesma brasa que acendia aquela grelha virou o coração da Brasa Burger: pão brioche tostado na
+          hora, carne selecionada, molho de receita própria e a paixão de quem trata cada burger como se fosse o
+          primeiro.
+        </p>
+        <a href="#historia" class="btn btn--outline">Conheça nossa história <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- ===================== ESTATÍSTICAS ===================== -->
+    <section class="stats" aria-label="Números da Brasa Burger">
+      <div class="stats__grid">
+        <div class="stat reveal">
+          <span class="stat__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <circle cx="11" cy="11" r="4" stroke="currentColor" stroke-width="2" />
+              <circle cx="22" cy="12" r="3.2" stroke="currentColor" stroke-width="2" />
+              <path d="M4 26c0-5 3.5-8 7-8s7 3 7 8M17 26c0-4 3-6.5 6-6.5s6 2.5 6 6.5" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span class="stat__number" data-count="250" data-suffix="K+">0</span>
+          <span class="stat__label">Clientes</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M16 4l3.5 7.2 7.9 1.1-5.7 5.6 1.3 7.9-7-3.7-7 3.7 1.3-7.9-5.7-5.6 7.9-1.1L16 4Z"
+                stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="stat__number" data-count="4.8" data-suffix="/5">0</span>
+          <span class="stat__label">Avaliação</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M6 28V14l10-8 10 8v14" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              <path d="M12 28v-8h8v8" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="stat__number" data-count="50" data-suffix="+">0</span>
+          <span class="stat__label">Unidades</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="12" r="7" stroke="currentColor" stroke-width="2" />
+              <path d="M11 18l-2 10 7-4 7 4-2-10" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="stat__number" data-count="10" data-suffix="+">0</span>
+          <span class="stat__label">Prêmios</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BENEFÍCIOS ===================== -->
+    <section class="perks" aria-label="Benefícios do pedido">
+      <div class="perks__grid">
+        <div class="perk reveal">
+          <span class="perk__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M4 22h14V10H4v12ZM18 14h6l4 5v3h-2" stroke="currentColor" stroke-width="2"
+                stroke-linejoin="round" />
+              <circle cx="9" cy="24" r="2.4" stroke="currentColor" stroke-width="2" />
+              <circle cx="23" cy="24" r="2.4" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </span>
+          <h3 class="perk__title">Entrega rápida</h3>
+          <p class="perk__text">Pedido preparado e entregue rapidamente.</p>
+        </div>
+        <div class="perk reveal">
+          <span class="perk__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <rect x="4" y="9" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2" />
+              <path d="M4 14h24" stroke="currentColor" stroke-width="2" />
+              <path d="M8 19h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </span>
+          <h3 class="perk__title">Pagamento seguro</h3>
+          <p class="perk__text">Pagamento simples e protegido.</p>
+        </div>
+        <div class="perk reveal">
+          <span class="perk__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M16 28c7-4 11-9 11-15a7 7 0 0 0-11-5.5A7 7 0 0 0 5 13c0 6 4 11 11 15Z" stroke="currentColor"
+                stroke-width="2" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <h3 class="perk__title">Suporte</h3>
+          <p class="perk__text">Estamos aqui para ajudar.</p>
+        </div>
+        <div class="perk reveal">
+          <span class="perk__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M5 16h22M16 5v22" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </span>
+          <h3 class="perk__title">Pedido fácil</h3>
+          <p class="perk__text">Escolha, personalize e peça.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA FINAL ===================== -->
+    <section class="cta-final">
+      <div class="cta-final__bg" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=1600&q=80" alt=""
+          loading="lazy">
+      </div>
+      <div class="cta-final__overlay" aria-hidden="true"></div>
+      <div class="cta-final__content reveal">
+        <h2 class="cta-final__title">Seu próximo burger favorito<br>está aqui.</h2>
+        <p class="cta-final__text">Escolha seu burger, monte seu pedido e aproveite.</p>
+        <a href="pages/cardapio.html" class="btn btn--primary btn--lg">Pedir agora <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="contato">
+    <div class="footer__grid">
+
+      <div class="footer__brand">
+        <span class="logo logo--footer">
+          <span class="logo__line">BRASA</span>
+          <span class="logo__line logo__line--accent">BURGER</span>
+        </span>
+        <p class="footer__tagline">Hambúrgueres artesanais feitos na brasa, com ingredientes de verdade e muito sabor.
+        </p>
+        <div class="footer__social">
+          <a href="#" class="icon-btn" aria-label="Instagram da Brasa Burger">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2" />
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" class="icon-btn" aria-label="Facebook da Brasa Burger">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M14 8.5h2.5V5H14c-2 0-3.5 1.6-3.5 3.6V11H8v3.5h2.5V21H14v-6.5h2.5l.5-3.5h-3V9c0-.5.3-.5.5-.5Z"
+                stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="#" class="icon-btn" aria-label="WhatsApp da Brasa Burger">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17l-1.4 4L10 19.6A8 8 0 1 0 5 15" stroke="currentColor" stroke-width="1.8"
+                stroke-linejoin="round" stroke-linecap="round" />
+              <path
+                d="M9.5 9.5c0 3.5 3 6.5 6.5 6.5.6 0 .9-.4.9-.9v-1.3l-2.2-.7-.9 1a5 5 0 0 1-3.4-3.4l1-.9-.7-2.2H9.6c-.1 0-.1.1-.1.1v1.8Z"
+                fill="currentColor" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Links rápidos">
+        <h3 class="footer__heading">Links</h3>
+        <ul class="footer__list">
+          <li><a href="#topo">Home</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#historia">Nossa história</a></li>
+          <li><a href="#locais">Locais</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col" id="locais">
+        <h3 class="footer__heading">Horário</h3>
+        <p class="footer__text">Seg – Dom<br>11:00 – 23:00</p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Contato</h3>
+        <p class="footer__text">(00) 00000-0000<br>contato@brasaburger.com.br</p>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2026 Brasa Burger. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao topo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

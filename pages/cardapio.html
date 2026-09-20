@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio — Brasa Burger</title>
+  <meta name="description"
+    content="Escolha seu burger favorito no cardápio da Brasa Burger. Hambúrgueres artesanais, combos, bebidas e sobremesas — adicione ao carrinho e peça agora.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/cardapio.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="../index.html" class="logo" aria-label="Brasa Burger, página inicial">
+        <span class="logo__line">BRASA</span>
+        <span class="logo__line logo__line--accent">BURGER</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="../index.html" class="nav__link">Home</a></li>
+          <li><a href="cardapio.html" class="nav__link is-active">Cardápio</a></li>
+          <li><a href="../index.html#historia" class="nav__link">Nossa História</a></li>
+          <li><a href="../index.html#locais" class="nav__link">Locais</a></li>
+          <li><a href="../index.html#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn icon-btn--cart" type="button" aria-label="Abrir carrinho" id="cart-open-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+            <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+          </svg>
+          <span class="cart-badge" id="cart-badge" aria-live="polite">0</span>
+        </button>
+        <button class="hamburger" id="hamburger-btn" type="button" aria-label="Abrir menu" aria-expanded="false"
+          aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-menu__list">
+        <li><a href="../index.html" class="mobile-menu__link">Home</a></li>
+        <li><a href="cardapio.html" class="mobile-menu__link">Cardápio</a></li>
+        <li><a href="../index.html#historia" class="mobile-menu__link">Nossa História</a></li>
+        <li><a href="../index.html#locais" class="mobile-menu__link">Locais</a></li>
+        <li><a href="../index.html#contato" class="mobile-menu__link">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="menu-hero" aria-labelledby="menu-hero-title">
+    <div class="menu-hero__ember" aria-hidden="true"></div>
+    <div class="menu-hero__inner">
+      <span class="menu-hero__kicker">Feito na brasa. Feito pra você.</span>
+      <h1 class="menu-hero__title" id="menu-hero-title">Nosso Cardápio</h1>
+      <p class="menu-hero__desc">Escolha seu favorito, ajuste a quantidade e adicione ao carrinho. Cada pedido é
+        preparado na hora com ingredientes de verdade.</p>
+    </div>
+  </section>
+
+  <!-- FILTROS -->
+  <div class="filter-bar" role="navigation" aria-label="Filtrar por categoria">
+    <div class="filter-bar__inner">
+      <a href="#conteudo-principal" class="filter-btn is-active" data-filter="all" id="filter-all"><span>🔥</span> Tudo</a>
+      <a href="#cat-burgers" class="filter-btn" data-filter="burgers" id="filter-burgers"><span>🍔</span> Burgers</a>
+      <a href="#cat-combos" class="filter-btn" data-filter="combos" id="filter-combos"><span>🍟</span> Combos</a>
+      <a href="#cat-drinks" class="filter-btn" data-filter="drinks" id="filter-drinks"><span>🥤</span> Bebidas</a>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="conteudo-principal">
+    <div class="page-wrapper">
+
+      <!-- BURGERS -->
+      <section class="category-section" data-category="burgers" aria-labelledby="cat-burgers">
+        <div class="category-header">
+          <h2 class="category-title" id="cat-burgers">Burgers</h2>
+          <span class="category-count">5 itens</span>
+        </div>
+        <div class="products-grid">
+
+          <article class="product-card" data-id="b1" data-name="Brasa Bacon" data-price="32.90"
+            data-img="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <div class="product-card__badges"><span class="badge badge--popular">Mais pedido</span></div>
+              <button class="product-card__fav" aria-label="Favoritar Brasa Bacon"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=800&q=80"
+                alt="Brasa Bacon com cheddar e bacon crocante" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Brasa Bacon</h3><span class="product-card__price">R$ 32,90</span>
+              </div>
+              <p class="product-card__desc">Carne bovina 180g, bacon crocante, queijo cheddar, alface, tomate e molho da
+                casa no pão brioche tostado.</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">180g</span><span class="tag">Brioche</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Brasa Bacon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="b2" data-name="Jalapeño Fire" data-price="34.90"
+            data-img="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <div class="product-card__badges"><span class="badge badge--hot">🌶 Apimentado</span></div>
+              <button class="product-card__fav" aria-label="Favoritar Jalapeño Fire"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80"
+                alt="Jalapeño Fire com jalapeño e cebola crispy" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Jalapeño Fire</h3><span class="product-card__price">R$ 34,90</span>
+              </div>
+              <p class="product-card__desc">Carne bovina 180g, cheddar derretido, jalapeño fresco, cebola crispy e molho
+                picante da casa.</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">180g</span><span class="tag">Picante</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Jalapeño Fire">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="b3" data-name="Brasa Supreme" data-price="39.90"
+            data-img="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <div class="product-card__badges"><span class="badge badge--new">Novo</span></div>
+              <button class="product-card__fav" aria-label="Favoritar Brasa Supreme"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80"
+                alt="Brasa Supreme duplo com cebola caramelizada" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Brasa Supreme</h3><span class="product-card__price">R$ 39,90</span>
+              </div>
+              <p class="product-card__desc">Duplo smash burger 2x120g, dois queijos, bacon, cebola caramelizada no vinho
+                e molho especial.</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">2x120g</span><span class="tag">Duplo</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Brasa Supreme">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="b4" data-name="Mushroom Melt" data-price="33.90"
+            data-img="https://images.unsplash.com/photo-1550317138-10000687a72b?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <button class="product-card__fav" aria-label="Favoritar Mushroom Melt"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?auto=format&fit=crop&w=800&q=80"
+                alt="Mushroom Melt com cogumelos salteados" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Mushroom Melt</h3><span class="product-card__price">R$ 33,90</span>
+              </div>
+              <p class="product-card__desc">Carne bovina 180g, queijo suíço derretido, cogumelos salteados na manteiga e
+                molho cremoso de ervas.</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">180g</span><span class="tag">Cogumelos</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Mushroom Melt">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="b5" data-name="Veggie Brasa" data-price="28.90"
+            data-img="https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <div class="product-card__badges"><span class="badge badge--veggie">🌿 Veggie</span></div>
+              <button class="product-card__fav" aria-label="Favoritar Veggie Brasa"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=800&q=80"
+                alt="Veggie Brasa burger vegetariano" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Veggie Brasa</h3><span class="product-card__price">R$ 28,90</span>
+              </div>
+              <p class="product-card__desc">Blend vegano de grão-de-bico e legumes, queijo vegano, alface, tomate,
+                pepino e molho tahine.</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">Veggie</span><span class="tag">Sem carne</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Veggie Brasa">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- FRANGO -->
+      <!-- <section class="category-section" data-category="chicken" aria-labelledby="cat-chicken">
+        <div class="category-header">
+          <h2 class="category-title" id="cat-chicken">Frango</h2>
+          <span class="category-count">3 itens</span>
+        </div>
+        <div class="products-grid">
+
+          <article class="product-card" data-id="c1" data-name="Crispy Chicken" data-price="29.90"
+            data-img="https://images.unsplash.com/photo-1615297928064-24977384d0da?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <div class="product-card__badges"><span class="badge badge--popular">Favorito</span></div>
+              <button class="product-card__fav" aria-label="Favoritar Crispy Chicken"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1615297928064-24977384d0da?auto=format&fit=crop&w=800&q=80"
+                alt="Crispy Chicken frango crocante" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Crispy Chicken</h3><span class="product-card__price">R$ 29,90</span>
+              </div>
+              <p class="product-card__desc">Filé de frango empanado artesanal, queijo prato, alface americana, tomate e
+                molho especial da casa.</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">Frango</span><span class="tag">Crispy</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Crispy Chicken">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="c2" data-name="Nashville Hot" data-price="31.90"
+            data-img="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <div class="product-card__badges"><span class="badge badge--hot">🌶 Quente</span></div>
+              <button class="product-card__fav" aria-label="Favoritar Nashville Hot"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=800&q=80"
+                alt="Nashville Hot frango picante estilo Nashville" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Nashville Hot</h3><span class="product-card__price">R$ 31,90</span>
+              </div>
+              <p class="product-card__desc">Frango crocante coberto com molho Nashville picante, pepino em conserva e
+                maionese de mel no brioche.</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">Picante</span><span class="tag">Frango</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Nashville Hot">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="c3" data-name="Chicken Ranch" data-price="27.90"
+            data-img="https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <button class="product-card__fav" aria-label="Favoritar Chicken Ranch"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=800&q=80"
+                alt="Chicken Ranch frango grelhado com molho ranch" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Chicken Ranch</h3><span class="product-card__price">R$ 27,90</span>
+              </div>
+              <p class="product-card__desc">Frango grelhado na brasa, bacon, queijo cheddar, alface, tomate e molho
+                ranch cremoso.</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">Grelhado</span><span class="tag">Ranch</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Chicken Ranch">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </section> -->
+
+      <!-- COMBOS -->
+      <section class="category-section" data-category="combos" aria-labelledby="cat-combos">
+        <div class="category-header">
+          <h2 class="category-title" id="cat-combos">Combos</h2>
+          <span class="category-count">2 itens</span>
+        </div>
+        <div class="products-grid">
+
+          <article class="product-card" data-id="co1" data-name="Combo Brasa" data-price="44.90"
+            data-img="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <div class="product-card__badges"><span class="badge badge--popular">Mais vendido</span></div>
+              <button class="product-card__fav" aria-label="Favoritar Combo Brasa"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+                alt="Combo Brasa burger batata e refrigerante" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Combo Brasa</h3><span class="product-card__price">R$ 44,90</span>
+              </div>
+              <p class="product-card__desc">Brasa Bacon + batata frita grande + refrigerante lata 350ml. Economize R$
+                5,90 no combo!</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">Combo</span><span class="tag">Economize</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Combo Brasa">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="co2" data-name="Combo Supreme" data-price="52.90"
+            data-img="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <div class="product-card__badges"><span class="badge badge--new">Novo</span></div>
+              <button class="product-card__fav" aria-label="Favoritar Combo Supreme"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=800&q=80"
+                alt="Combo Supreme burger duplo batata e bebida" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Combo Supreme</h3><span class="product-card__price">R$ 52,90</span>
+              </div>
+              <p class="product-card__desc">Brasa Supreme duplo + batata rústica + milkshake 400ml. O combo mais
+                completo da casa!</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">Combo</span><span class="tag">Premium</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Combo Supreme">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- BEBIDAS -->
+      <section class="category-section" data-category="drinks" aria-labelledby="cat-drinks">
+        <div class="category-header">
+          <h2 class="category-title" id="cat-drinks">Bebidas</h2>
+          <span class="category-count">2 itens</span>
+        </div>
+        <div class="products-grid">
+
+          <article class="product-card" data-id="d1" data-name="Refrigerante Lata" data-price="7.90"
+            data-img="https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <button class="product-card__fav" aria-label="Favoritar Refrigerante Lata"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=800&q=80"
+                alt="Refrigerante em lata gelado" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Refrigerante Lata</h3><span class="product-card__price">R$ 7,90</span>
+              </div>
+              <p class="product-card__desc">Coca-Cola, Guaraná Antarctica, Fanta Laranja ou Sprite. Servida bem
+                geladinha.</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">350ml</span><span class="tag">Gelado</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Refrigerante">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- <article class="product-card" data-id="d2" data-name="Milkshake" data-price="16.90"
+            data-img="https://images.unsplash.com/photo-1619158401201-8fa44fc8c597?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <div class="product-card__badges"><span class="badge badge--popular">Top</span></div>
+              <button class="product-card__fav" aria-label="Favoritar Milkshake"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1619158401201-8fa44fc8c597?auto=format&fit=crop&w=800&q=80"
+                alt="Milkshake cremoso de chocolate" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Milkshake</h3><span class="product-card__price">R$ 16,90</span>
+              </div>
+              <p class="product-card__desc">Milkshake cremoso: Chocolate, Morango, Baunilha ou Nutella. 400ml gelado.
+              </p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">400ml</span><span class="tag">Cremoso</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Milkshake">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article> -->
+
+          <article class="product-card" data-id="d3" data-name="Água Mineral" data-price="4.90"
+            data-img="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <button class="product-card__fav" aria-label="Favoritar Água Mineral"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=800&q=80"
+                alt="Garrafa de água mineral" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Água Mineral</h3><span class="product-card__price">R$ 4,90</span>
+              </div>
+              <p class="product-card__desc">Água mineral natural sem gás ou com gás. Garrafa 500ml bem gelada.</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">500ml</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Água Mineral">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SOBREMESAS -->
+      <!-- <section class="category-section" data-category="desserts" aria-labelledby="cat-desserts">
+        <div class="category-header">
+          <h2 class="category-title" id="cat-desserts">Sobremesas</h2>
+          <span class="category-count">2 itens</span>
+        </div>
+        <div class="products-grid">
+
+          <article class="product-card" data-id="de1" data-name="Brownie com Sorvete" data-price="18.90"
+            data-img="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <div class="product-card__badges"><span class="badge badge--popular">Favorito</span></div>
+              <button class="product-card__fav" aria-label="Favoritar Brownie com Sorvete"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80"
+                alt="Brownie quentinho com sorvete de baunilha" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Brownie c/ Sorvete</h3><span class="product-card__price">R$ 18,90</span>
+              </div>
+              <p class="product-card__desc">Brownie quentinho de chocolate 70% cacau, sorvete de baunilha e calda de
+                chocolate.</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">Chocolate</span><span class="tag">Quente</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Brownie">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card" data-id="de2" data-name="Churros Recheado" data-price="14.90"
+            data-img="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80">
+            <div class="product-card__media">
+              <div class="product-card__badges"><span class="badge badge--new">Novo</span></div>
+              <button class="product-card__fav" aria-label="Favoritar Churros Recheado"><svg width="16" height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z" />
+                </svg></button>
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+                alt="Churros recheado com doce de leite" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3 class="product-card__name">Churros Recheado</h3><span class="product-card__price">R$ 14,90</span>
+              </div>
+              <p class="product-card__desc">3 unidades de churros crocante recheados com doce de leite ou Nutella.
+                Polvilhados com açúcar e canela.</p>
+              <div class="product-card__footer">
+                <div class="product-card__tags"><span class="tag">3 unid.</span><span class="tag">Crocante</span></div>
+                <div class="qty-control"><button class="qty-btn" data-action="decrease"
+                    aria-label="Diminuir">−</button><span class="qty-value" aria-live="polite">1</span><button
+                    class="qty-btn" data-action="increase" aria-label="Aumentar">+</button></div>
+              </div>
+              <button class="add-to-cart-btn" type="button" style="margin-top:.9rem;width:100%;justify-content:center;"
+                aria-label="Adicionar Churros">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+                  <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+                </svg>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </section> -->
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="../index.html" class="footer__logo" aria-label="Brasa Burger, página inicial">
+        <span class="logo__line">BRASA</span>
+        <span class="logo__line logo__line--accent">BURGER</span>
+      </a>
+      <a href="../index.html" class="footer__back">&#8592; Voltar à página principal</a>
+      <p class="footer__copy">&#169; 2026 Brasa Burger. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- CARRINHO DRAWER -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho de compras" role="dialog" aria-modal="true">
+    <div class="cart-drawer__header">
+      <h2 class="cart-drawer__title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+          <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+        </svg>
+        Carrinho <span class="cart-drawer__count" id="cart-drawer-count">0</span>
+      </h2>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Fechar carrinho">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <div class="cart-drawer__body" id="cart-drawer-body">
+      <div class="cart-empty" id="cart-empty">
+        <svg class="cart-empty__icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L21 8H6" />
+          <circle cx="10" cy="21" r="1.4" />
+          <circle cx="18" cy="21" r="1.4" />
+        </svg>
+        <h3 class="cart-empty__title">Carrinho vazio</h3>
+        <p class="cart-empty__text">Adicione itens do cardápio para começar seu pedido.</p>
+      </div>
+      <div id="cart-items-list"></div>
+    </div>
+    <div class="cart-drawer__footer" id="cart-drawer-footer" style="display:none">
+      <div class="cart-summary">
+        <div class="cart-summary__row"><span>Subtotal</span><span id="cart-subtotal">R$ 0,00</span></div>
+        <div class="cart-summary__row"><span>Taxa de entrega</span><span>R$ 5,00</span></div>
+        <div class="cart-summary__row cart-summary__row--total"><span>Total</span><span id="cart-total">R$ 5,00</span>
+        </div>
+      </div>
+      <button class="cart-checkout-btn" id="cart-checkout-btn" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+        Finalizar pedido
+      </button>
+      <button class="cart-clear-btn" id="cart-clear-btn" type="button">Limpar carrinho</button>
+    </div>
+  </aside>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- VOLTAR AO TOPO -->
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao topo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <!-- SCRIPT -->
+  <script src="../js/cardapio.js"></script>
+  <!-- <script src="../js/compras.js"></script> -->
+
+</body>
+
+</html>
